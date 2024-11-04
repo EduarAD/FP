@@ -1,0 +1,198 @@
+1. 
+#include <iostream>
+using namespace std;
+int main() {
+    int A, B, C;
+    cout << "Ingresa el primer número (A): ";
+    cin >> A;
+    cout << "Ingresa el segundo número (B): ";
+    cin >> B;
+    cout << "Ingresa el tercer número (C): ";
+    cin >> C;
+    int mayor = A;
+    if (B > mayor) {
+        mayor = B;
+    }
+    if (C > mayor) {
+        mayor = C;
+    }
+    cout << "El número más grande es: " << mayor << endl;
+    return 0;
+}
+
+
+
+
+
+
+2.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int A, B, C, max, min;
+        Console.Write("Ingrese el primer número (A): ");
+        A = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese el segundo número (B): ");
+        B = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese el tercer número (C): ");
+        C = int.Parse(Console.ReadLine());
+
+        if (A > B)
+        {
+            max = A;
+            min = B;
+        }
+        else
+        {
+            max = B;
+            min = A;
+        }
+
+        if (C > max)
+        {
+            max = C;
+        }
+
+        if (C < min)
+        {
+            min = C;
+        }
+        Console.WriteLine("El número más grande es: " + max);
+        Console.WriteLine("El número más pequeño es: " + min);
+    }
+}
+
+
+
+
+3.
+using System;
+class Program
+{
+    static void Main()
+    {
+        int HH, MM, SS;
+        Console.Write("Ingrese las horas (0-23): ");
+        HH = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese los minutos (0-59): ");
+        MM = int.Parse(Console.ReadLine());
+        Console.Write("Ingrese los segundos (0-59): ");
+        SS = int.Parse(Console.ReadLine());
+
+        if (HH < 0 || HH > 23 || MM < 0 || MM > 59 || SS < 0 || SS > 59)
+        {
+            Console.WriteLine("Error: La hora, minutos o segundos ingresados no son válidos.");
+            return;
+        }
+        SS++;
+        if (SS == 60)
+        {
+            SS = 0;
+            MM++; 
+        }
+        if (MM == 60)
+        {
+            MM = 0;
+            HH++; 
+        }
+        if (HH == 24)
+        {
+            HH = 0;
+        }
+        Console.WriteLine("La hora dentro de un segundo será: {0:D2}:{1:D2}:{2:D2}", HH, MM, SS);
+    }
+}
+
+
+
+
+4.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double distancia, precioPorKm = 2.5, precioTotal;
+        int diasEstancia;
+
+        Console.Write("Ingrese la distancia a recorrer en km: ");
+        distancia = double.Parse(Console.ReadLine());
+
+        Console.Write("Ingrese el número de días de estancia: ");
+        diasEstancia = int.Parse(Console.ReadLine());
+
+        precioTotal = distancia * precioPorKm * 2; 
+
+        if (diasEstancia > 7 && distancia > 800)
+        {
+            precioTotal *= 0.7; 
+        }
+
+        Console.WriteLine("El precio del boleto de ida y vuelta es: $" + precioTotal.ToString("F2"));
+    }
+}
+
+
+
+
+5.
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int angulo = 90; 
+        if (angulo == 90)
+        {
+            Console.WriteLine("El ángulo es un ángulo recto");
+        }
+        else
+        {
+            Console.WriteLine("El ángulo no es un ángulo recto");
+        }
+
+        double temperatura = 100.5; 
+        if (temperatura > 100)
+        {
+            Console.WriteLine("Por encima del punto de ebullición del agua");
+        }
+        else
+        {
+            Console.WriteLine("Por debajo del punto de ebullición del agua");
+        }
+
+        int numero = 5; 
+        int totalPositivos = 0;
+        int totalNegativos = 0;
+
+        if (numero > 0)
+        {
+            totalPositivos += numero;
+        }
+        else
+        {
+            totalNegativos += numero;
+        }
+
+        Console.WriteLine("Total de positivos: " + totalPositivos);
+        Console.WriteLine("Total de negativos: " + totalNegativos);
+
+        int x = 10, y = 5, z = 2;
+        if (x > y && z < y)
+        {
+            Console.WriteLine(x);
+        }
+
+        if (distancia > 20 && distancia < 35)
+        {
+            Console.Write("Ingrese el valor para la variable 'tiempo': ");
+            int tiempo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Tiempo ingresado: " + tiempo);
+        }
+    }
+}
